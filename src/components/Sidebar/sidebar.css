@@ -1,0 +1,93 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Sidebar and content columns */
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    font-family: 'emoji'; /* Ensure the font style is applied */
+    overflow: hidden; /* Prevent overflow issues */
+    transition: grid-template-columns 0.3s ease; /* Smooth transition for column width change */
+  }
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #1e3a5f; /* Improved sidebar background color */
+    width: 200px;
+    transition: transform 0.3s ease;
+    padding: 15px;
+    color: white;
+    z-index: 1; /* Ensure sidebar is on top */
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-200px); /* Hide sidebar when closed */
+  }
+  
+  .sidebar.open {
+    transform: translateX(0); /* Show sidebar when open */
+  }
+  
+  
+  .toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .account-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-image {
+    width: 60px; /* Slightly larger profile image */
+    height: 60px; /* Slightly larger profile image */
+    border-radius: 50%;
+    border: 2px solid #e74c3c; /* Border for image */
+    cursor: pointer;
+  }
+  
+  .account-info {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .account-text {
+    font-size: 20px;
+    color: #f5f5f5; /* Smoke white color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .edit-icon {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #f5f5f5; /* Smoke white color */
+    cursor: pointer;
+  }
+  
+  .account-email {
+    font-size: 12px; /* Smaller font size for email */
+    color: #b0bec5; /* Light dark color for email */
+    margin-top: 5px; /* Adjusted margin for proper spacing */
+  }
+  
+  .sidebar-item {
+    margin: 10px 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: white;
+    text-decoration: none;
+  }
